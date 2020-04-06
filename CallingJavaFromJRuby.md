@@ -263,7 +263,7 @@ And the Ruby File class is still accessible:
 Making them accessible in the main name space
 ---------------------------------------------
 
-You can set `const_missing` to make them accessible in more than just a module. See [[http://www.ruby-forum.com/topic/216629]] though there might be a better way.
+You can set `const_missing` to make them accessible in more than just a module. See [[http://www.ruby-forum.com/topic/216629]].
 
 Using within classes within module
 ----------------------------------
@@ -289,6 +289,26 @@ Currently, `include_package` lookup doesn't work within any sub-modules or sub-c
 ```
 
 You could override `const_missing`, though (see above), if you wanted that behavior.
+
+There is a [rubygem](https://rubygems.org/gems/nested_inherited_jruby_include_package) that implements this already: [nested_inherited_jruby_include_package](https://github.com/AndyObtiva/nested_inherited_jruby_include_package). 
+
+It patches `include_package` to ensure included packages are nested and inherited, thus working in nested-modules/nested-classes and sub-modules/sub-classes. Note the caveat that [nested_inherited_jruby_include_package](https://github.com/AndyObtiva/nested_inherited_jruby_include_package) globally hooks into `Module#const_missing` after aliasing to `const_missing_without_nested_inherited_jruby_include_package`, which it calls if a constant is not found in any Java package. As such, keep its load order in mind if you have other code hooking into `Module#const_missing`.
+
+Example (using [nested_inherited_jruby_include_package](https://github.com/AndyObtiva/nested_inherited_jruby_include_package)):
+
+```ruby
+require 'nested_inherited_jruby_include_package'
+
+module GUI
+  include_package 'javax.swing'
+  include_package 'java.awt.image' # BufferedImage
+  # bellow won't work without accessing BufferedImage before :
+  class ShowImage < JFrame
+    p BufferedImage.new(10, 20, BufferedImage::TYPE_BYTE_BINARY)
+  end
+end
+# prints #<Java::JavaAwtImage::BufferedImage:0x2f112965>
+```
 
 Using Static Java Enumerations
 ------------------------------
