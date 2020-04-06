@@ -307,7 +307,9 @@ module GUI
     p BufferedImage.new(10, 20, BufferedImage::TYPE_BYTE_BINARY)
   end
 end
-# prints #<Java::JavaAwtImage::BufferedImage:0x2f112965>
+```
+```
+#<Java::JavaAwtImage::BufferedImage:0x2f112965>
 ```
 
 Using Static Java Enumerations
