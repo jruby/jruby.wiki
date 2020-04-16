@@ -224,7 +224,7 @@ If your Ruby subclass is extending or implementing a Java type, you can set the 
 ```java
 IRubyObject rubyClass = evaler.eval(runtime, "MyRubyClass");
 Object[] parameters = {javaObject, otherJavaObject};
-MyJavaType rubyObject = (MyJavaType)JavaEmbedUtils.invokeMethod(runtime, rubyClass "new", parameters, MyJavaType.class);
+MyJavaType rubyObject = (MyJavaType)JavaEmbedUtils.invokeMethod(runtime, rubyClass, "new", parameters, MyJavaType.class);
 ```
 
 
