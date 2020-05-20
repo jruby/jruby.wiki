@@ -204,6 +204,22 @@ Or
  end
 ```
 
+You can also create and throw Ruby exceptions from Java:
+
+```java
+// To construct one of the core error types, use the appropriate method on org.jruby.Ruby
+RaiseException rubyThrowable = runtime.newArgumentError("some message")
+
+// To construct a non-core error type, construct it from Ruby and call toThrowable
+IRubyObject exception = runtime.evalScriptlet("Mongo::GssapiNative::Error.new(\"" + message + "\")");
+throw ((RubyException) exception).toThrowable();
+
+// Or acquire a reference to the class and use newInstance
+RubyClass cls = runtime.getClass("Mongo::GssapiNative::Error");
+RubyString msg = RubyString.newString(context.runtime, message);
+throw ((RubyException) cls.newInstance(context, msg, Block.NULL_BLOCK)).toThrowable();
+```
+
 == synchronize ==
 : a ''synchronize'' method is provided on every wrapped Java object. For example:
 
