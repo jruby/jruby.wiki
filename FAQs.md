@@ -238,6 +238,11 @@ Why don't my special characters (like ção) appear correctly in my Swing app ?
 
 The file encoding for the `.rb` file containing the special characters must be set to UTF-8.
 
+How do I find out JRuby version?
+--------------------------------
+
+Use the `JRUBY_VERSION` constant.
+
 How do I check which version of the JVM JRuby is running on?
 ------------------------------------------------------------
 
