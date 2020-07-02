@@ -33,7 +33,7 @@ JRuby release preparation
     * ```rake server``` and check all links 
 
 * Send emails to ruby-talk@ruby-lang.org, jruby@ruby-lang.org
-* tweet, facebook, linkedin
+* tweet, facebook, linkedin, reddit
 * close milestone on GH and open new milestone for next release
 * /msg chanserv OP #jruby <nick>
 * /msg chanserv TOPIC #jruby Get 9.1.18.0! http://jruby.org/ | http://wiki.jruby.org | http://logs.jruby.org/jruby/ | http://bugs.jruby.org | Paste at http://gist.github.com
