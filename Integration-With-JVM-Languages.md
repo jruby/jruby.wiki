@@ -12,6 +12,7 @@ Java (general-purpose integration)
 * [[Standalone Jars and Classes|StandaloneJarsAndClasses]]
 * [[Improving Java Integration Performance|ImprovingJavaIntegrationPerformance]]
 * [[Using Maven libraries from JRuby|Using Maven libraries from JRuby]]
+* [[Loading Scripts From Classpath]]
 
 Scala
 =====
