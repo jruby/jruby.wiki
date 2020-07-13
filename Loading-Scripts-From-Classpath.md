@@ -53,3 +53,5 @@ File is: uri:classloader:/file.rb
 $ java -cp lib/jruby-complete.jar:relative.jar:file.jar org.jruby.Main uri:classloader:/relative.rb
 File is: uri:classloader:/file.rb
 ```
+
+JRuby's ability to `load`, `require`, and `require_relative` Ruby scripts from entirely within the classpath namespace makes it possible for you to `jar` up entire applications and their dependencies, distributing a single file you can run on any JVM. See tools like [Warbler](https://github.com/jruby/warbler) for help assembling larger applications into `jar` or `war` (web application archive) files.
