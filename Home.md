@@ -69,6 +69,7 @@ This is a community wiki dedicated to [JRuby], an implementation of the [Ruby](h
 
 * [[GUI Frameworks|GUIFrameworks]]
 * [The Redcar Editor](http://redcareditor.com/) (built with SWT)
+* [Math Bowling 2](https://www.github.com/AndyObtiva/MathBowling)
 
 **Get Creative**
 * [propane](https://ruby-processing.github.io/propane/) (batteries included ruby-processing for processing-3.5 and jdk11)
