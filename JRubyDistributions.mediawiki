@@ -22,7 +22,7 @@ JRuby is available at our [http://www.jruby.org/download website], but it is als
 |Mac OS-X
 |[http://brew.sh/ Homebrew]
 | [https://github.com/Homebrew?tab=members maintainers]
-| 9.2.7.0
+| 9.2.13.0
 | [https://formulae.brew.sh/formula/jruby formula]
 |-
 |Mac OS-X
