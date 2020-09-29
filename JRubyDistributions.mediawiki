@@ -4,7 +4,7 @@ JRuby is available at our [http://www.jruby.org/download website], but it is als
 !OS
 !Package
 !Maintainer
-!Current versions (1.7.27, 9.1.12.0)
+!Current versions (9.1.17.0, 9.2.13.0)
 !Notes
 |-
 |POSIX
