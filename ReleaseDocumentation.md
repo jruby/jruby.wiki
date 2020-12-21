@@ -41,3 +41,7 @@ JRuby release preparation
    * Change URLs to have SHA256 after file url#SHA256
    * Send PR to https://github.com/sstephenson/ruby-build with PR like: https://github.com/olleolleolle/ruby-build/commit/3b14690ddec4f90cbc264c54af16d617f845c94a
    * Send PR to https://github.com/postmodern/ruby-versions with file checksums and version numbers as detailed here: https://github.com/postmodern/ruby-versions/blob/master/CONTRIBUTING.md
+   * Update official Docker images
+     * Update jruby/docker-jruby using the update.sh script, which will produce a diff like this: https://github.com/jruby/docker-jruby/commit/c35ff88ae9943d120c0707c68caa37611cf7093b
+     * Send PR to https://github.com/docker-library/official-images updating the `library/jruby` file like this PR: https://github.com/docker-library/official-images/pull/9318
+     * See https://github.com/jruby/jruby/issues/5598#issuecomment-748281323 for a description of the process.
