@@ -849,7 +849,18 @@ end
 ```
 **Note**: This [feature](http://jewelruby.kares.org/an-obvious-java-dispatch) is available since JRuby **1.7.22** and **9.0.1.0**.
 
+Block Implementaiton of Java Interfaces
+---------------------------------------
 
+A final way to implement Java interfaces is via the `::impl` method on the interface module. For example:
+
+```ruby
+java.lang.Runnable.impl {|method_name| puts "Run!" }
+java.lang.Comparable.impl {|method_name, other| other.nil? }
+java.lang.Appendable.impl {|method_name, *args| p args }
+```
+
+The first argument to the block is a symbol of the method name being invoked, and the remaining block arguments are any arguments on that method.
 
 Java classes can't inherit from a JRuby class
 ---------------------------------------------
