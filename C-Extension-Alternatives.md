@@ -19,6 +19,7 @@ If you are interested in helping us port an extension to JRuby, this article is 
 |[curb][]|[Rurl][] is an example how to implement _some_ of curb's functionality using [Apache HttpClient][]|
 |[curses][]|Use [ffi-ncurses][].  ncurses is literal API and lower level than curses|
 |[fast_xor][]|use [xorcist][] instead or roll slower but pure ruby equivalent.|
+|[escape_utils][]|Most of the escape methods here are now native code in CRuby and JRuby for the CGI library. Others can be found in the JDK itself.|
 |[image_science][]|Use [image_voodoo][] instead.|
 |[kyotocabinet][]|Try using [kyotocabinet-java][] instead. This isn't 100% complete yet, but it covers most of the API.|
 |[memcached][]|Try using [jruby-memcached][] instead. Alternatively you can use [jruby-ehcache][], a JRuby interface to Java's (JSR-107 compliant) Ehcache.|
@@ -92,4 +93,5 @@ Please add to this list with your findings.
 [image_science]: https://github.com/seattlerb/image_science
 [rugged]: https://github.com/libgit2/rugged
 [rjgit]: https://github.com/repotag/rjgit
+[escape_utils]: https://github.com/brianmario/escape_utils
 <!-- links end -->
