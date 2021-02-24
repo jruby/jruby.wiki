@@ -36,6 +36,11 @@ JRuby is available at our [http://www.jruby.org/download website], but it is als
 | Jeremy Evans
 | 
 |-
+|FreeBSD
+|ports
+|[https://wiki.freebsd.org/Ruby ruby@FreeBSD.org]
+| [https://www.freshports.org/lang/jruby lang/jruby]
+|-
 |Redhat/Fedora
 |RPM
 | Mohammed Morsi
