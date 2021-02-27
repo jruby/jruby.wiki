@@ -71,6 +71,11 @@ JRuby is available at our [http://www.jruby.org/download website], but it is als
 | jruby-core
 | [http://jruby.org/download download installer]
 |-
+| Windows
+| [https://chocolatey.org Chocolatey]
+| [https://chocolatey.org/profiles/dgalbraith dgalbraith]
+| [https://chocolatey.org/packages/jruby Chocolatey package] <br \> [https://github.com/dgalbraith/chocolatey-packages/automatic/jruby Package source]
+|-
 | Windows, Linux, Mac OS X, Virtual Appliance and Amazon Cloud Images
 | BitNami
 | BitNami
