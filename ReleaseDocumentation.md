@@ -11,7 +11,6 @@ JRuby release preparation
     * Verify windows installers
     * Does jruby-complete work with rubygems (especially on windows)
     * email good env testers (Ben, Terrence)
-* export MAVEN_OPTS=-XX:MaxPermSize=768m
 * update VERSION
 * ./mvnw
 * commit and `tag -a` with release notes 
