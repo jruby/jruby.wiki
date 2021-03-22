@@ -67,32 +67,7 @@ Now you can place the full path to JRuby in the shebang line, along with paramet
 How can I increase the heap/memory size when launching a sub-JRuby?
 -------------------------------------------------------------------
 
-You can try passing the usual `-J-Xmx<size>` to the sub-JRuby. But beware:
-
-```bash
-    $ jruby -e '%x{jruby -J-Xmx256m -e true}'
-    warning: -J-Xmx256m argument ignored (launched in same VM?)
-```
-
-Historically, JRuby has been very slow to start up, so we have tried to recognize some commands that look like they may be launching more Ruby programs and we start those in the same JVM. In that case, you actually can't adjust the heap.
-
-We have a special system property that controls this behavior VM-wide (pass on the command-line as `-J-Djruby.launch.inproc=false`):
-
-```bash
-    jruby.launch.inproc=true|false
-    #Set in-process launching of e.g. system('ruby ...'). Default is true
-```
-
-And you can also control this from Ruby code for the current JRuby runtime:
-
-```ruby
-    require 'jruby'
-    JRuby.runtime.instance_config.run_ruby_in_process = false
-```
-
-With the `inproc` setting disabled, you can now pass `-J` arguments to the sub-JRuby as it will be launching a new JVM.
-
-In the future, as JRuby and JVM startup performance increases, we may flip the default in-process launching behavior to `false` to match most peoples' expectations. See also [this thread on the JRuby mailing list](http://www.mail-archive.com/dev@jruby.codehaus.org/msg02861.html) for a discussion of `jruby.launch.inproc`.
+Passing the standard `-Xmx<size>` flag to the JVM, either via the `JAVA_OPTS` environment variable or by adding `-J-Xmx<size>` to `JRUBY_OPTS` will set the maximum size for the main JRuby process and any JRuby subprocesses that it starts. You may also set this in the environment before or during the launch of that subprocess to control memory size on a per-process basis.
 
 Why does my application use more memory under JRuby than under <your impl of choice here>?
 ------------------------------------------------------------------------------------------
