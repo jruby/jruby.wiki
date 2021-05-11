@@ -73,9 +73,9 @@ This is a community wiki dedicated to [JRuby], an implementation of the [Ruby](h
 * [Are We There Yet?](https://www.github.com/AndyObtiva/are-we-there-yet) (built with [Glimmer](https://github.com/AndyObtiva/glimmer))
 
 **Get Creative**
-* [propane](https://ruby-processing.github.io/propane/) (batteries included ruby-processing for processing-3.5 and jdk11)
-* [JRubyArt](https://ruby-processing.github.io/propane/) (ruby wrapper for processing-3.5+)
-* [PiCrate](https://ruby-processing.github.io/PiCrate/) (batteries included ruby-processing for processing-3.5 on RaspberryPI)
+* [propane](https://ruby-processing.github.io/propane/) (batteries included ruby-processing jdk11+)
+* [JRubyArt](https://ruby-processing.github.io/propane/) (successor to ruby-processing jdk11+)
+* [PiCrate](https://ruby-processing.github.io/PiCrate/) (batteries included ruby-processing on RaspberryPI 32 and 64 bit)
 
 **Evangelism**
 
