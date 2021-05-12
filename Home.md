@@ -13,6 +13,7 @@ This is a community wiki dedicated to [JRuby], an implementation of the [Ruby](h
 * [[Walkthroughs and Tutorials|WalkthroughsandTutorials]]
 * [[Integrating with JVM languages and libraries|Integration-With-JVM-Languages]]
 * [[Performance Tuning|PerformanceTuning]]
+* [[Improving startup time]]
 * [[C extension alternatives]]
 * [[Troubleshooting]] - Improving startup time, memory use, performance, etc.
 * [[FAQs]]
