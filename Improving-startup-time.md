@@ -22,6 +22,14 @@ When JRuby boots up, the JDK libraries responsible for random number generation 
 
 You may be able to solve these issues by supplying more entropy to the Linux kernel or by configuring it to maintain a larger entropy pool on its own. Here's a good article on [setting up additional sources of entropy](https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged).
 
+Example installation of [haveged](http://www.issihosts.com/haveged/) on an apt-based system:
+
+```
+$ sudo apt install haveged
+...
+$ sudo service haveged start
+```
+
 Use the "client" mode of the JVM
 ================================
 
