@@ -89,9 +89,13 @@ Note that loading jar-files via `require` searches along the `$LOAD_PATH` for th
 
 ### From .class files
 
-If you need to load from an existing .class file (or one that's not camel-case), the following has examples: [[http://www.ruby-forum.com/topic/216572#939791]]
+If you need to load from an existing .class file, if it's relative to the current directory (for instance ./org/JavaFile.class exists) then you can just do `java_import org.JavaFile` or `java_import 'org.JavaFile'`.
 
-Basically it's `$CLASSPATH << "target/classes"; java_import org.asdf.ClassName` where "target/classes/org/asdf/ClassName.class" exists.
+If it's in "some other directory" (or classname isn't camel-case), the following has examples: [[http://www.ruby-forum.com/topic/216572#939791]]
+
+Basically like this: `$CLASSPATH << "target/classes"; java_import org.asdf.ClassName` where "target/classes/org/asdf/ClassName.class" exists.
+
+If you have a .class file that is in your current directory (like no package, current directory has JavaFile.class in it), then `java_import 'JavaFile'` works.
 
 Note also that this will need to be a full path name or relative to the directory the script starts in, as the JVM doesn't seem to respond to Dir.chdir very well.
 
