@@ -20,3 +20,10 @@ Other Links
 Here's some other articles by folks who have resolved native library issues under JRuby.
 
 [[JRuby on Alpine Linux]]
+
+fstat unimplemented
+============
+
+If you get the failure `NotImplementedError: fstat unimplemented unsupported or native support failed to load` 
+
+If you proceed to run it with  -Djruby.native.verbose=true and it says `java.lang.UnsatisfiedLinkError: Unable to execute or load jffi binary stub from `/tmp`. Set `TMPDIR` or Java property `java.io.tmpdir` to a read/write path that is not mounted "noexec".` [see here] for more information (https://github.com/jruby/jruby/issues/1302#issuecomment-840735752).  
