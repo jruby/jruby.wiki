@@ -10,7 +10,7 @@ In JRuby, the Ruby ```Socket``` class can only be used for client-side connectio
 
 Here's a simple example of a server:
 
-```
+```ruby
 require "socket"
 
 socket = ServerSocket.new(Socket::AF_INET, Socket::SOCK_STREAM, 0)
@@ -21,7 +21,7 @@ socket.accept
 
 The API works basically like ```Socket```, but with ```ServerSocket``` in its place. You can also include the following code to make server sockets that work on JRuby and other impls with both server and client support in ```Socket```:
 
-```
+```ruby
 if RUBY_ENGINE != 'jruby'
   ServerSocket = Socket
 end
@@ -30,13 +30,13 @@ end
 Bind and Listen and Backlogs
 ----------------------------
 
-The normal sequence for listening for connections on a Ruby Socket is to call ```new``` for a new Socket, ```bind``` to bind to an address and port, ```listen``` to express intent to listen for connections with the specified connection backlog, and finally ```accept``` to accept incoming connections.
+The normal sequence for listening for connections on a Ruby Socket is to call `new` for a new Socket, `bind` to bind to an address and port, `listen` to express intent to listen for connections with the specified connection backlog, and finally `accept` to accept incoming connections.
 
-On JRuby's ServerSocket, ```bind``` and ```listen``` are combined into ```bind```, which accepts an optional backlog argument.
+On JRuby's ServerSocket, `bind` and `listen` are combined into `bind`, which accepts an optional backlog argument.
 
 Here's an example:
 
-```
+```ruby
 socket = ServerSocket.new(Socket::AF_INET, Socket::SOCK_STREAM, 0)
 sockaddr = ServerSocket.pack_sockaddr_in(12345, "127.0.0.1")
 socket.bind(sockaddr, 5)
@@ -47,7 +47,7 @@ socket.accept
 
 For non-JRuby impls, the following simple monkey-patch makes their ```bind``` work like ours, for API-compatibility:
 
-```
+```ruby
 if RUBY_ENGINE != 'jruby'
   ServerSocket = Socket # as shown above
   class Socket
