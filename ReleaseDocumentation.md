@@ -12,7 +12,7 @@ JRuby release preparation
     * Does jruby-complete work with rubygems (especially on windows)
     * email good env testers (Ben, Terrence)
 * update VERSION
-* ./mvnw
+* mvn
 * commit and `tag -a` with release notes 
 * cd .. && rm -rf release && git clone jruby release && cd release
 * mvn clean deploy -Psonatype-oss-release -Prelease
@@ -22,7 +22,7 @@ JRuby release preparation
 * close and release snapshot repo on sonatype (https://oss.sonatype.org - snapshot repos)
 * (broken currently) `jruby -S applet:dist`
     * upload resulting jruby-complete-signedjar to http://jruby.org.s3.amazonaws.com/tryjruby/jruby-complete-signed.jar
-* `git push --tags` to propagate tag once release artifacts are out
+* `git push origin 9.2.18.0` to propagate tag once release artifacts are out
 * Add news item to www.jruby.org page 
     * edit config.yml
     * edit www/downloads.html
