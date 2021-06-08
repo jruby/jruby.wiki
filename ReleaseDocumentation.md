@@ -24,11 +24,10 @@ JRuby release preparation
     * upload resulting jruby-complete-signedjar to http://jruby.org.s3.amazonaws.com/tryjruby/jruby-complete-signed.jar
 * `git push origin 9.2.18.0` to propagate tag once release artifacts are out
 * Add news item to www.jruby.org page 
-    * edit config.yml
-    * edit www/downloads.html
-    * add www/_posts/2013-12-06-jruby-1-7-9.markdown
+    * edit _config.yml
+    * edit downloads.html
+    * add _posts/2013-12-06-jruby-1-7-9.markdown
     * JRUBY_VERSION=1.7.9 rake issues to get issues list
-    * ```rake index``` to update our download index files
     * ```rake server``` and check all links 
 
 * Send emails to ruby-talk@ruby-lang.org, jruby@ruby-lang.org
