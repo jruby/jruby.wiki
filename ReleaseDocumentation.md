@@ -43,3 +43,4 @@ JRuby release preparation
      * Update jruby/docker-jruby using the update.sh script, which will produce a diff like this: https://github.com/jruby/docker-jruby/commit/c35ff88ae9943d120c0707c68caa37611cf7093b
      * Send PR to https://github.com/docker-library/official-images updating the `library/jruby` file like this PR: https://github.com/docker-library/official-images/pull/9318
      * See https://github.com/jruby/jruby/issues/5598#issuecomment-748281323 for a description of the process.
+   * Update jbang catalog at https://github.com/jruby/jbang-catalog
